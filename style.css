@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+body {
+    line-height: 1.6;
+    color: #fff;
+    background: #111;
+}
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(45deg, #1a1a2e, #16213e);
+    overflow: hidden;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.2), transparent 70%);
+    animation: pulse 6s infinite;
+}
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.2); opacity: 1; }
+}
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+.subtitle {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+.cta {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.25rem;
+    background: #00b4d8;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.about-link {
+    text-align: center;
+    padding: 2rem 0;
+}
+.subscribe-section {
+    text-align: center;
+    padding: 3rem 0;
+    background: #16213e;
+}
+.subscribe-section input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+.subscribe-section button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    background: #00b4d8;
+    color: #fff;
+}
+nav.back-link {
+    padding: 1rem;
+}
+section.about, section.steps, section.bet, section.cta {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.steps ol {
+    list-style: none;
+}
+.steps li {
+    margin-bottom: 0.5rem;
+}
+.bet ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.icon {
+    margin-right: 0.5rem;
+}
